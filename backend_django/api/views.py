@@ -1,22 +1,21 @@
 from rest_framework import viewsets
-from .models import Servicio, Producto, Contacto
-from .serializers import ServicioSerializer, ProductoSerializer, ContactoSerializer
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from .models import Service, Product, Contact
+from .serializers import ServiceSerializer, ProductSerializer, ContactSerializer
 
-@api_view(['GET'])
-def inicio(request):
-    return Response({"mensaje": "Bienvenido a la API de Arca Oexdi"})
+# View of the view of Service
+class ServiceViewSet(viewsets.ModelViewSet):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
+    filterset_fields = ['name', 'price']
 
+# View of the view of Product
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    filterset_fields = ['name', 'price', 'stock']
 
-class ServicioViewSet(viewsets.ModelViewSet):
-    queryset = Servicio.objects.all()
-    serializer_class = ServicioSerializer
-
-class ProductoViewSet(viewsets.ModelViewSet):
-    queryset = Producto.objects.all()
-    serializer_class = ProductoSerializer
-
-class ContactoViewSet(viewsets.ModelViewSet):
-    queryset = Contacto.objects.all()
-    serializer_class = ContactoSerializer
+# View of the view of Contact
+class ContactViewSet(viewsets.ModelViewSet):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
+    filterset_fields = ['name', 'email']

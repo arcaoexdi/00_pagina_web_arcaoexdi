@@ -85,3 +85,8 @@ Abre un Pull Request explicando tu aporte
 
 📌 Autor
 Arca Oexdi Desarrollador especializado en Python, Django REST y entornos escalables. 
+
+Credenciales Admin Django
+User Arcaoexdi
+Email arcaoexdi@gmail.com
+Password Arcaoexdi963/+

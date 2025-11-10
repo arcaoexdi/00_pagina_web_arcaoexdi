@@ -1,16 +1,15 @@
-from django.urls import path
 from rest_framework import routers
-from .views import ServicioViewSet, ProductoViewSet, ContactoViewSet, inicio
-from rest_framework.response import Response
-
+from .views import ServiceViewSet, ProductViewSet, ContactViewSet
 
 router = routers.DefaultRouter()
-router.register(r'servicios', ServicioViewSet)
-router.register(r'catalogo', ProductoViewSet)
-router.register(r'contacto', ContactoViewSet)
+# Route of the API endpoints services
+router.register(r'services', ServiceViewSet)
 
-urlpatterns = [
-    path('inicio/', inicio),   # <-- aquí agregamos la ruta manual
-]
+# Route of the API endpoints products
+router.register(r'catalog', ProductViewSet) 
 
-urlpatterns += router.urls
+# Route of the API endpoints contacts
+router.register(r'contacts', ContactViewSet)
+
+# Final URL patterns
+urlpatterns = router.urls

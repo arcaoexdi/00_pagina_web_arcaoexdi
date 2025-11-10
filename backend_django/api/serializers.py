@@ -1,18 +1,17 @@
-# Create serializers for the Servicio, Producto, and Contacto models for API representation in format JSON.
 from rest_framework import serializers
-from .models import Servicio, Producto, Contacto
+from .models import Service, Product, Contact
 
-class ServicioSerializer(serializers.ModelSerializer):
+class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Servicio
+        model = Service
         fields = '__all__'
 
-class ProductoSerializer(serializers.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Producto
+        model = Product
         fields = '__all__'
 
-class ContactoSerializer(serializers.ModelSerializer):
+class ContactSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Contacto
+        model = Contact
         fields = '__all__'
