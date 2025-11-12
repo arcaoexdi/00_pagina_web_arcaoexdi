@@ -8,8 +8,8 @@ Desarrollo de la página web oficial de **Arca Oexdi**, con arquitectura escalab
 
 | Capa       | Lenguaje / Framework     | Descripción técnica |
 |------------|---------------------------|----------------------|
-| Backend    | Python + Django REST      | API RESTful, lógica empresarial, autenticación |
-| Frontend   | TypeScript + Angular      | SPA dinámica, componentes reutilizables |
+| Backend    | Python + FastApi      | API RESTful, lógica empresarial, autenticación |
+| Frontend   | REAC      | SPA dinámica, componentes reutilizables |
 | Control de versiones | Git + GitHub     | Repositorios separados para backend y frontend |
 | Hosting    | Hostinger (vía GitHub)    | Despliegue automatizado y escalable |
 
